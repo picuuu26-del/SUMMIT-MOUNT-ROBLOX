@@ -15,7 +15,7 @@ ScreenGui.ResetOnSpawn = false
 
 -- Frame untuk menu teleport
 local menuFrame = Instance.new("Frame")
-menuFrame.Size = UDim2.new(0, 200, 0, 0) -- awalnya tinggi 0, nanti berkembang saat show
+menuFrame.Size = UDim2.new(0, 100, 0, 0) -- awalnya tinggi 0, nanti berkembang saat show
 menuFrame.Position = UDim2.new(0, 20, 0, 60)
 menuFrame.BackgroundColor3 = Color3.fromRGB(138,43,226)
 menuFrame.Visible = false
@@ -29,7 +29,7 @@ for name, cf in pairs(checkpoints) do
     btn.Position = UDim2.new(0,10,0,y)
     btn.BackgroundColor3 = Color3.fromRGB(75,0,130) -- ungu gelap
     btn.TextColor3 = Color3.fromRGB(255,255,255)
-    btn.Text = "Teleport "..name
+    btn.Text = "CP 1 "..name
     btn.Font = Enum.Font.SourceSansBold
     btn.TextSize = 18
     
@@ -41,7 +41,7 @@ for name, cf in pairs(checkpoints) do
         if name == "PUNCAK" then
             local leaderstats = player:FindFirstChild("leaderstats")
             if leaderstats and leaderstats:FindFirstChild("Summit") then
-                leaderstats.Summit.Value = leaderstats.Summit.Value + 1
+                leaderstats.Summit.Value = leaderstats.Summit.Value + 2
             end
         end
     end)
